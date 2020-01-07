@@ -42,8 +42,6 @@ export const deviceConfigurationHandler = {
             wtis: sensor!.wateringTimeInSeconds,
             miim: configuration!.measuringIntervalInMinutes,
             mwtp: configuration!.waterLevelInPercentage,
-            h: configuration!.humidityInPercentage,
-            t: configuration!.temperatureInCelsius,
             wtt: configuration!.waterTank!.type,
             wth: configuration!.waterTank!.heightInCentimeter,
             wtl: configuration!.waterTank!.lengthInCentimeter,

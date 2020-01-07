@@ -12,8 +12,6 @@ export interface DeviceConfigurationModel extends Document {
 export interface DeviceConfigurationShortened {
     miim: Number,
     mwtp: Number,
-    t: Number,
-    h: Number
 }
 
 export type DeviceConfiguration = DeviceConfigurationModel | null | undefined;
