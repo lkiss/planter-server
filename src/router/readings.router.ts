@@ -5,4 +5,4 @@ export const readingsRouter = Router();
 
 readingsRouter
     .get("/:deviceId/:sensorIndex", readingsHandler.getReadings)
-    .post("/iot/:deviceId/:sensorIndex", readingsHandler.addIotReading);
+    .post("/:deviceId/:sensorIndex/iot", readingsHandler.addIotReading);
