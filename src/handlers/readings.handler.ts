@@ -18,6 +18,7 @@ export const readingsHandler = {
             .find({ deviceId })
             .where("sensorIndex").equals(sensorIndex)
             .where("deviceId").equals(deviceId)
+            .sort({ createdAt: "desc" })
             .limit(numberOfReadings);
 
         if (readings) {
