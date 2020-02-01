@@ -9,10 +9,12 @@ import { sensorRouter } from './router/sensor.router';
 import { databaseMiddleware } from './database/database.middleware';
 import { readingsRouter } from './router/readings.router';
 import { errorMiddleware } from './error/error.middleware';
+import { loggerMiddleware } from './logger/logger.middleware';
 
 
 const app = express();
 app.use(express.json());
+app.use(loggerMiddleware);
 app.use(errorMiddleware);
 
 app.use(databaseMiddleware);
@@ -32,8 +34,6 @@ app.use("/devices", deviceConfigurationRouter);
 app.use("/devices", sensorRouter);
 
 app.use("/readings", readingsRouter);
-
-
 
 app.listen(PORT, () => {
     console.log(`Server is listening on ${PORT}`);
