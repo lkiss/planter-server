@@ -11,7 +11,8 @@ export interface LogModel extends Document {
     requestMethod: string,
     requestUrl: string,
     requestBody: any,
-    requestParams: any
+    requestParams: any,
+    responseBody: any
 }
 
 export type Log = LogModel | null | undefined;

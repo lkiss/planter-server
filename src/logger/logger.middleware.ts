@@ -21,6 +21,7 @@ export const logger = {
             requestUrl: request.url || undefined,
             requestBody: request.body || undefined,
             requestParams: request.params || undefined,
+            responseBody: response.body || undefined,
             message,
             type
         }

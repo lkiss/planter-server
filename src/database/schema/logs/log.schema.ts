@@ -12,4 +12,5 @@ export const LogSchema = new Schema<LogModel>({
     requestUrl: Object,
     requestBody: Object,
     requestParams: Object,
+    responseBody: Object
 }, { timestamps: true, shardKey: { _id: 1 } });
