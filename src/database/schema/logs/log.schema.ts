@@ -8,6 +8,7 @@ export const LogSchema = new Schema<LogModel>({
     sensorIndex: String,
     type: String,
     message: Object,
+    requestMethod: String,
     requestUrl: Object,
     requestBody: Object,
     requestParams: Object,

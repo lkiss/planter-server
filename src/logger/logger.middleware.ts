@@ -15,20 +15,9 @@ export const loggerMiddleware = (request: any, response: any, next: any) => {
 
 export const logger = {
     log: (request: any, response: any, message: any, type: string) => {
-        let deviceId = undefined;
-        let sensorIndex = undefined;
-
-        if (request.params && request.params.deviceId) {
-            deviceId = request.params.deviceId;
-        }
-        if (request.params && request.params.sensorIndex) {
-            sensorIndex = request.params.sensorIndex;
-        }
-
         const logEntry = {
             _id: mongoose.Types.ObjectId().toHexString(),
-            deviceId,
-            sensorIndex,
+            requestMethod: request.method || undefined,
             requestUrl: request.url || undefined,
             requestBody: request.body || undefined,
             requestParams: request.params || undefined,

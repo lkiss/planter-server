@@ -8,7 +8,8 @@ export interface LogModel extends Document {
     sensorIndex: String
     type: String
     message: any,
-    requestUrl: any,
+    requestMethod: string,
+    requestUrl: string,
     requestBody: any,
     requestParams: any
 }
