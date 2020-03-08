@@ -10,6 +10,7 @@ import { databaseMiddleware } from './database/database.middleware';
 import { readingsRouter } from './router/readings.router';
 import { errorMiddleware } from './error/error.middleware';
 import { loggerMiddleware } from './logger/logger.middleware';
+import { healthCheckRouter } from './router/healthCheck.router';
 
 
 const app = express();
@@ -27,6 +28,7 @@ app.use(express.static(path.join(VIRTUAL_PATH, 'dist')));
 
 app.use("/", homeRouter);
 app.use("/home", homeRouter);
+app.use("/healthcheck", healthCheckRouter);
 
 app.use("/devices", devicesRouter);
 app.use("/devices", deviceRouter);
