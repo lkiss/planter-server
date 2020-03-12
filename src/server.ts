@@ -9,13 +9,12 @@ import { sensorRouter } from './router/sensor.router';
 import { databaseMiddleware } from './database/database.middleware';
 import { readingsRouter } from './router/readings.router';
 import { errorMiddleware } from './error/error.middleware';
-import { loggerMiddleware } from './logger/logger.middleware';
 import { healthCheckRouter } from './router/healthCheck.router';
 
 
 const app = express();
 app.use(express.json());
-app.use(loggerMiddleware);
+//app.use(loggerMiddleware);
 app.use(errorMiddleware);
 
 app.use(databaseMiddleware);
