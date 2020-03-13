@@ -10,11 +10,12 @@ import { databaseMiddleware } from './database/database.middleware';
 import { readingsRouter } from './router/readings.router';
 import { errorMiddleware } from './error/error.middleware';
 import { healthCheckRouter } from './router/healthCheck.router';
+import { loggerMiddleware } from './logger/logger.middleware';
 
 
 const app = express();
 app.use(express.json());
-//app.use(loggerMiddleware);
+app.use(loggerMiddleware);
 app.use(errorMiddleware);
 
 app.use(databaseMiddleware);
